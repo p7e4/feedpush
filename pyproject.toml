@@ -1,0 +1,35 @@
+[build-system]
+requires = []
+build-backend = "pdm.backend"
+
+[project]
+name = "feedpush"
+dynamic = ["version"]
+description = "A simple rss/atom feed parser"
+readme = "README.md"
+authors = [{name="p7e4"}]
+license = {text = "GPLv3"}
+requires-python = ">= 3.12"
+dependencies = [
+  "rssfeed >= 0.3",
+  "aiohttp >= 3.10"
+]
+
+keywords = ["feedpsuh", "rss", "feed", "notify"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+[project.urls]
+Repository = "https://github.com/p7e4/feedpush"
+Issues = "https://github.com/p7e4/feedpush/issues"
+
+[project.scripts]
+feedpush = "feedpush:cli"
+
+[tool.pdm.version]
+source = "file"
+path = "feedpush/main.py"

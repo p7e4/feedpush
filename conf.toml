@@ -1,0 +1,18 @@
+# 运行时间间隔, 单位为分钟, 如果不持续运行设为0
+interval = 0
+
+[[project]]
+feeds = [
+    "https://www.ruanyifeng.com/blog/atom.xml",
+    # {url="xxx", name="自定义源标题"}
+
+]
+
+webhooks = [
+    "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxxxxxx",
+    "https://open.feishu.cn/open-apis/bot/v2/hook/xxxx"
+    # {url="xxx", sign="加签"}
+]
+
+
+
